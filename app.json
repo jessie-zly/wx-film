@@ -1,0 +1,12 @@
+{
+  "pages": [
+    "pages/movie/index/index",
+    "pages/welcome/welcome"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "狗眼电影",
+    "navigationBarTextStyle": "black"
+  }
+}

@@ -1,0 +1,133 @@
+/* pages/movie/index/index.wxss */
+
+.container {
+  height: 100%;
+  background: #f8f8f8;
+  font-size: 32rpx;
+}
+
+/* search view */
+
+.search {
+  box-sizing: border-box;
+  width: 100%;
+  height: 84rpx;
+  background: #fff;
+  border: 2rpx solid #e6e6e6;
+  padding: 10rpx 50rpx;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.search-icon {
+  display: block;
+  width: 28rpx;
+  height: 28rpx;
+  margin: 16rpx 0;
+}
+
+.search-input {
+  display: block;
+  width: 100%;
+  height: 60rpx;
+  font-size: 30rpx;
+  line-height: 60rpx;
+  margin-left: 20rpx;
+  color: #9e9e9e;
+}
+
+.search-input-placeholder {
+  font-size: 28rpx;
+  line-height: 30rpx;
+  color: #9e9e9e;
+}
+
+/* hot view */
+
+.hot {
+  box-sizing: border-box;
+  width: 100%;
+	height: 484rpx;
+  margin-top: 40rpx;
+  background: #fff;
+  border: 2rpx solid #e6e6e6;
+  padding: 10rpx 50rpx;
+}
+
+.title-area {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hot-title {
+  font-size: 28rpx;
+  line-height: 60rpx;
+  color: #399;
+}
+
+.hot-more {
+  font-size: 28rpx;
+  line-height: 60rpx;
+  color: #f00;
+}
+
+.movie-hot-area {
+  width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.movie-scroll{
+  width: 100%;
+}
+.movie-hot-wrap{
+	margin-right: 10rpx;
+  width: 200rpx;
+  height: 400rpx;
+	display: inline-block;
+}
+.movie-hot-item{
+	width: 100%;
+	height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.movie-hot-pic{
+	display: block;
+	width: 100%;
+	margin-bottom: 10rpx;
+}
+.movie-hot-title{
+	font-size: 28rpx;
+	line-height: 40rpx;
+	font-weight: 500;
+}
+.movie-hot-rating{
+	font-size: 20rpx;
+	color: #9e9e9e;
+}
+.movie-hot-count{
+	font-size: 20rpx;
+	color: #9e9e9e;
+}
+
+.coming{
+	box-sizing: border-box;
+  width: 100%;
+	height: 484rpx;
+  margin-top: 40rpx;
+  background: #fff;
+  border: 2rpx solid #e6e6e6;
+  padding: 10rpx 50rpx;
+}
+
+.classical{
+	box-sizing: border-box;
+  width: 100%;
+	height: 484rpx;
+  margin-top: 40rpx;
+  background: #fff;
+  border: 2rpx solid #e6e6e6;
+  padding: 10rpx 50rpx;
+}
