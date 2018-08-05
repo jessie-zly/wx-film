@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/movie/index/index",
-    "pages/welcome/welcome"
+    "pages/welcome/welcome",
+    "pages/movie/detail/detail"
   ],
   "window": {
     "backgroundTextStyle": "light",

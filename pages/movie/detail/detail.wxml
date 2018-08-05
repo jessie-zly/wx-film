@@ -1,0 +1,13 @@
+<!--pages/movie/detail/detail.wxml-->
+<view class='container'>
+  <view class='detail-info'>
+    <image src='{{filmDetail.images.small}}' class='detail-image' lazy-load='true'></image>
+    <view class='detail-text'>
+      <text class='film-title'>影片名称:{{filmDetail.title}}</text>
+			<text class='film-genres'>影片类型:{{filmDetail.genres}}</text>
+			<text class='film-durations'>影片时长:{{filmDetail.durations}}</text>
+			<text class='film-pubdates'>上映日期:{{filmDetail.mainland_pubdate}}</text>
+			<text class='film-rating'>影片评分:{{filmDetail.rating.average}}</text>
+    </view>
+  </view>
+</view>
