@@ -14,54 +14,54 @@
     </view>
     <view class="movie-hot-area">
       <scroll-view class="movie-scroll" scroll-x='true'>
-			<view class='movie-hot-wrap' wx:for='{{playingList.subjects}}' wx:key='index' bindtap='playingDetail' data-id='{{item.id}}'>
-        <view class="movie-hot-item">
-          <image class='movie-hot-pic' src='{{item.images.small}}' lazy-load='true'></image>
-           <text class='movie-hot-title'>{{item.title}}</text> 
-           <text class='movie-hot-rating'>{{item.rating.average}}分</text> 
-           <text class='movie-hot-count'>{{item.collect_count}}人想看</text> 
+        <view class='movie-hot-wrap' wx:for='{{playingList.subjects}}' wx:key='index' bindtap='playingDetail' data-id='{{item.id}}'>
+          <view class="movie-hot-item">
+            <image class='movie-hot-pic' src='{{item.images.small}}' lazy-load='true'></image>
+            <text class='movie-hot-title'>{{item.title}}</text>
+            <text class='movie-hot-rating'>{{item.rating.average}}分</text>
+            <text class='movie-hot-count'>{{item.collect_count}}人想看</text>
+          </view>
         </view>
-			</view>
       </scroll-view>
     </view>
   </view>
   <!-- hot end -->
   <!-- coming begin -->
   <view class='coming'>
-		<view class='title-area'>
+    <view class='title-area'>
       <text class='hot-title'>即将上映</text>
       <text class='hot-more'>更多</text>
     </view>
     <view class="movie-hot-area">
       <scroll-view class="movie-scroll" scroll-x='true'>
-			<view class='movie-hot-wrap' wx:for='{{comingList.subjects}}' wx:key='index'>
-        <view class="movie-hot-item">
-          <image class='movie-hot-pic' src='{{item.images.small}}'></image>
-           <text class='movie-hot-title'>{{item.title}}</text> 
-           <text class='movie-hot-rating'>{{item.rating.average}}分</text> 
-           <text class='movie-hot-count'>{{item.collect_count}}人想看</text> 
+        <view class='movie-hot-wrap' wx:for='{{comingList.subjects}}' wx:key='index'>
+          <view class="movie-hot-item">
+            <image class='movie-hot-pic' src='{{item.images.small}}'></image>
+            <text class='movie-hot-title'>{{item.title}}</text>
+            <text class='movie-hot-rating'>{{item.rating.average}}分</text>
+            <text class='movie-hot-count'>{{item.collect_count}}人想看</text>
+          </view>
         </view>
-			</view>
       </scroll-view>
     </view>
   </view>
   <!-- coming end -->
   <!-- classical begin -->
   <view class='classical'>
-		<view class='title-area'>
+    <view class='title-area'>
       <text class='hot-title'>经典再现</text>
       <text class='hot-more'>更多</text>
     </view>
     <view class="movie-hot-area">
       <scroll-view class="movie-scroll" scroll-x='true'>
-			<view class='movie-hot-wrap' wx:for='{{top250List.subjects}}' wx:key='index'>
-        <view class="movie-hot-item">
-          <image class='movie-hot-pic' src='{{item.images.small}}'></image>
-           <text class='movie-hot-title'>{{item.title}}</text> 
-           <text class='movie-hot-rating'>{{item.rating.average}}分</text> 
-           <text class='movie-hot-count'>{{item.collect_count}}人想看</text> 
+        <view class='movie-hot-wrap' wx:for='{{top250List.subjects}}' wx:key='index'>
+          <view class="movie-hot-item">
+            <image class='movie-hot-pic' src='{{item.images.small}}'></image>
+            <text class='movie-hot-title'>{{item.title}}</text>
+            <text class='movie-hot-rating'>{{item.rating.average}}分</text>
+            <text class='movie-hot-count'>{{item.collect_count}}人想看</text>
+          </view>
         </view>
-			</view>
       </scroll-view>
     </view>
   </view>

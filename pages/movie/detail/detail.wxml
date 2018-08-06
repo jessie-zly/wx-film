@@ -1,13 +1,89 @@
 <!--pages/movie/detail/detail.wxml-->
 <view class='container'>
+  <!-- 信息 -->
   <view class='detail-info'>
-    <image src='{{filmDetail.images.small}}' class='detail-image' lazy-load='true'></image>
-    <view class='detail-text'>
-      <text class='film-title'>影片名称:{{filmDetail.title}}</text>
-			<text class='film-genres'>影片类型:{{filmDetail.genres}}</text>
-			<text class='film-durations'>影片时长:{{filmDetail.durations}}</text>
-			<text class='film-pubdates'>上映日期:{{filmDetail.mainland_pubdate}}</text>
-			<text class='film-rating'>影片评分:{{filmDetail.rating.average}}</text>
+    <image src='{{filmDetail.images.small}}' class='detail-info-image' lazy-load='true'></image>
+    <view class='detail-info-text'>
+      <text class='detail-info-title'>影片名称:{{filmDetail.title}}</text>
+      <text class='detail-info-genres'>影片类型:{{filmDetail.genres}}</text>
+      <text class='detail-info-durations'>影片时长:{{filmDetail.durations}}</text>
+      <text class='detail-info-pubdates'>上映日期:{{filmDetail.mainland_pubdate}}</text>
+      <text class='detail-info-rating'>影片评分:{{filmDetail.rating.average}}</text>
+    </view>
+  </view>
+  <!-- 简介 -->
+  <view class='detail-summary'>
+    <text class='detail-summary-title'>简介</text>
+    <text class='detail-summary-body'>{{filmDetail.summary}}</text>
+    <button class='detail-summary-toggle'>展开详情</button>
+  </view>
+  <!-- 主演 -->
+  <view class='detail-cast'>
+    <text class='detail-cast-title'>主演</text>
+    <view class='detail-cast-body'>
+      <scroll-view class="detail-cast-scroll" scroll-x='true'>
+        <view class='detail-cast-wrap' wx:for='{{filmDetail.casts}}' wx:key='index' bindtap='castDetail' data-id='{{item.id}}'>
+          <view class="detail-cast-item">
+            <image class='detail-cast-pic' src='{{item.avatars.small}}' lazy-load='true'></image>
+            <text class='detail-cast-name'>{{item.name}}</text>
+            <text class='detail-cast-name'>{{item.content}}</text>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  <!-- 导演 -->
+  <view class='detail-director'>
+    <text class='detail-director-title'>导演</text>
+    <view class='detail-director-body'>
+      <scroll-view class="detail-director-scroll" scroll-x='true'>
+        <view class='detail-director-wrap' wx:for='{{filmDetail.directors}}' wx:key='index' bindtap='directorDetail' data-id='{{item.id}}'>
+          <view class="detail-director-item">
+            <image class='detail-director-pic' src='{{item.avatars.small}}'></image>
+            <text class='detail-director-name'>{{item.name}}</text>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  <!-- 预告 -->
+  <view class='detail-trailer'>
+    <text class='detail-trailer-title'>预告</text>
+    <swiper class='detail-trailer-swiper' indicator-dots='true' autoplay='true' interval='2000'>
+      <block wx:for="{{filmDetail.trailers}}" wx:key='index'>
+        <swiper-item class='detail-trailer-item'>
+          <image class="detail-trailer-img" src="{{item.small}}"></image>
+          <video class='detail-trailer-video' src='{{item.resource_url}}'></video>
+          <text class='detail-trailer-text'>{{item.title}}</text>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- 剧照 -->
+  <view class='detail-photo'>
+    <text class='detail-photo-title'>剧照</text>
+    <view class='detail-photo-body'>
+      <scroll-view class="detail-photo-scroll" scroll-x='true'>
+        <view class='detail-photo-wrap' wx:for='{{filmDetail.photos}}' wx:key='index' bindtap='castDetail' data-id='{{item.id}}'>
+          <view class="detail-photo-item">
+            <image class='detail-photo-pic' src='{{item.icon}}' lazy-load='true'></image>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  <!-- 评论区 -->
+  <view class='detail-cast'>
+    <text class='detail-cast-title'>热评</text>
+    <view class='detail-cast-body'>
+      <scroll-view class="detail-cast-scroll" scroll-x='true'>
+        <view class='detail-cast-wrap' wx:for='{{filmDetail.popular_comments}}' wx:key='index' bindtap='castDetail' data-id='{{item.id}}'>
+          <view class="detail-cast-item">
+            <image class='detail-cast-pic' src='{{item.avatars}}'></image>
+            <text class='detail-cast-name'>{{item.author.name}}</text>
+          </view>
+        </view>
+      </scroll-view>
     </view>
   </view>
 </view>
