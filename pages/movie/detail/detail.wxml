@@ -2,14 +2,16 @@
 <view class='container'>
   <!-- 信息 -->
   <view class='detail-info'>
-    <image src='{{filmDetail.images.small}}' class='detail-info-image' lazy-load='true'></image>
     <view class='detail-info-text'>
-      <text class='detail-info-title'>影片名称:{{filmDetail.title}}</text>
-      <text class='detail-info-genres'>影片类型:{{filmDetail.genres}}</text>
-      <text class='detail-info-durations'>影片时长:{{filmDetail.durations}}</text>
-      <text class='detail-info-pubdates'>上映日期:{{filmDetail.mainland_pubdate}}</text>
-      <text class='detail-info-rating'>影片评分:{{filmDetail.rating.average}}</text>
+      <text class='detail-info-title'>{{filmDetail.title}}</text>
+			<view class='detail-info-genres'>
+				<text class='detail-info-genres-text' wx:for='{{filmDetail.genres}}' wx:key='index'>{{item}}</text>
+			</view>
+      <text class='detail-info-durations'>{{filmDetail.durations}}</text>
+      <text class='detail-info-pubdates'>中国大陆/{{filmDetail.mainland_pubdate}}</text>
+      <text class='detail-info-rating'>{{filmDetail.rating.average}}</text>
     </view>
+		<image src='{{filmDetail.images.small}}' class='detail-info-image' lazy-load='true'></image>
   </view>
   <!-- 简介 -->
   <view class='detail-summary'>
@@ -47,7 +49,7 @@
     </view>
   </view>
   <!-- 预告 -->
-  <view class='detail-trailer'>
+  <!-- <view class='detail-trailer'>
     <text class='detail-trailer-title'>预告</text>
     <swiper class='detail-trailer-swiper' indicator-dots='true' autoplay='true' interval='2000'>
       <block wx:for="{{filmDetail.trailers}}" wx:key='index'>
@@ -58,7 +60,7 @@
         </swiper-item>
       </block>
     </swiper>
-  </view>
+  </view> -->
   <!-- 剧照 -->
   <view class='detail-photo'>
     <text class='detail-photo-title'>剧照</text>

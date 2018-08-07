@@ -28,6 +28,7 @@ Page({
     // 获取详情
     wx.request({
       url: 'https://douban.uieee.com/v2/movie/subject/' + this.data.id,
+      // url: 'https://m.maizuo.com/v4/api/film/4280', // 卖座网测试
       method: 'GET',
       header: {
         'content-type': 'json'
@@ -45,10 +46,10 @@ Page({
 
   },
 
-	//
-	castDetail(){
-		console.log('演员信息');
-	},
+  //
+  castDetail() {
+    console.log('演员信息');
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -34,7 +34,7 @@ Page({
       url: 'https://douban.uieee.com/v2/movie/in_theaters?start=0&&count=10',
       method: 'GET',
       header: {
-        'content-type': 'json'
+				'content-type': 'json'
       },
       success: res => {
         console.log(res)
@@ -52,7 +52,7 @@ Page({
       url: 'https://douban.uieee.com/v2/movie/coming_soon?start=0&&count=10',
       method: 'GET',
       header: {
-        'content-type': 'json'
+				'content-type': 'json'
       },
       success: res => {
         console.log(res)
@@ -70,7 +70,7 @@ Page({
       url: 'https://douban.uieee.com/v2/movie/top250?start=0&&count=10',
       method: 'GET',
       header: {
-        'content-type': 'json'
+				'content-type': 'json'
       },
       success: res => {
         console.log(res)
@@ -140,6 +140,9 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function() {
-
+		return {
+			title: '关于狗眼电影',
+			path: '/page/welcome/welcome'
+		}
   }
 })

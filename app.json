@@ -6,8 +6,8 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#399",
     "navigationBarTitleText": "狗眼电影",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
   }
 }

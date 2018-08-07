@@ -8,11 +8,9 @@
 /* 信息 */
 .detail-info{
 	width: 100%;
-	/* background-color: rgba(0,0,0,.2); */
-	background: url() no-repeat center rgba(0,0,0,.2);
 	margin: 10rpx 0;
 	display: flex;
-	justify-content: flex-start;
+	justify-content: space-between;
 }
 .detail-info-image{
 	display: block;
@@ -22,19 +20,45 @@
 .detail-info-text{
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: stretch;
+	text-align: left;
 	font-size: 28rpx;
+	color: #4a4a4a;
 	line-height: 30rpx;
+	width: 400rpx;
 }
 .detail-info-title{
+	width: 100%;
 	font-size: 40rpx;
 	line-height: 50rpx;
-	color: #f00;
+	color: #399;
+	margin: 10rpx 0;
 }
-/* .detail-info-genres{} */
-/* .detail-info-durations{} */
-/* .detail-info-pubdates{} */
-/* .detail-info-rating{} */
+.detail-info-genres{
+	width: 100%;
+	margin: 10rpx 0;
+	display: flex;
+	justify-content: flex-start;
+}
+.detail-info-genres-text{
+	border: 1rpx solid #ccc;
+	padding: 5rpx 10rpx;
+	margin-right: 10rpx;
+}
+.detail-info-durations{
+	width: 100%;
+	margin: 10rpx 0;
+}
+.detail-info-pubdates{
+	width: 100%;
+	margin: 10rpx 0;
+}
+.detail-info-rating{
+	width: 100%;
+	margin: 10rpx 0;
+	border: 1rpx solid #ccc;
+	padding: 5rpx 10rpx;
+}
 
 /* 简介 */
 .detail-summary{
