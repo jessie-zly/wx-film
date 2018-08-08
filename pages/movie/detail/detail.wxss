@@ -56,8 +56,20 @@
 .detail-info-rating{
 	width: 100%;
 	margin: 10rpx 0;
-	border: 1rpx solid #ccc;
-	padding: 5rpx 10rpx;
+}
+
+.detail-btn{
+	width: 100%;
+	margin: 10rpx 0;
+	display: flex;
+	justify-content: space-between;
+}
+.detail-btn-btn{
+	width: 160rpx;
+	background: #ccc;
+	color: #399;
+	font-size: 30rpx;
+	opacity: .5;
 }
 
 /* 简介 */
@@ -242,4 +254,57 @@
 	width: 100%;
 	height: 180rpx;
 	display: block;
+}
+
+/* 热评 */
+.detail-comment{
+	width: 100%;
+	margin: 10rpx 0;
+}
+.detail-comment-title{
+	font-size: 30rpx;
+	line-height: 42rpx;
+	color: #399;
+}
+.detail-comment-body{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin: 10rpx 0;
+}
+.detail-comment-avatar{
+	display: block;
+	width: 40rpx;
+	height: 40rpx;
+	border-radius: 50%;
+}
+.detail-comment-info{
+	width: 90%;
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	font-size: 24rpx;
+	color: #4a4a4a;
+}
+.detail-comment-name{
+	font-size: 28rpx;
+	color: #000;
+}
+.detail-comment-rating{
+	margin: 10rpx 0;
+	color: #f00;
+}
+.detail-comment-content{
+	margin: 10rpx 0;
+}
+.detail-comment-created{
+	margin: 10rpx 0;
+}
+.detail-comment-count{
+	display: block;
+	width: 100%;
+	font-size: 36rpx;
+	color: #f00;
+	text-align: center;
+	margin: 10rpx 0;
 }
